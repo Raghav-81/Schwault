@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="">
+        <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+        <link href="/static/css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700" rel="stylesheet">
+        <style>
+            .img1{
+                height:400px;
+                width:400px;
+            }
+
+            .img2{
+                height:400px;
+                width:400px;
+            }
+
+            .img3{
+                height:400px;
+                width:400px;
+            }
+        </style>
+    </head>
+    <body>
+    <!-- HEADER =============================-->
+    <header class="item header margin-top-0">
+        <div class="wrapper">
+            <nav role="navigation" class="navbar navbar-white navbar-embossed navbar-lg navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle navigation</span>
+                    </button>
+                    <a href="index.html" class="navbar-brand brand"> SCHWAULT </a>
+                </div>
+                <div id="navbar-collapse-02" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="propClone"><a href="http://127.0.0.1:5000/">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="text-homeimage">
+                            <img src="/static/Capture.PNG"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% if req_output[0] %}
+        <section class="item content">
+            <div class="container">
+                <div class="underlined-title">
+                    <div class="editContent">
+                        <h2 class="text-center latestitems">Your Probability Of Default value is : {{defval}}</h2>
+                        <h1 class="text-center latestitems" >The Plots Displayed below provide a greater insight</h1>
+                    </div>
+                    <div class="wow-hr type_short">
+                        <span class="wow-hr-h">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <img 1 class="img1" src="/static/BoxPlot.jpg" align="left" >
+        <img 2 class="img2" src="/static/ConditionalPlot.jpg" align="middle" >
+        <img 3 class="img3" src="/static/Plot.jpg" align="right" >
+    {% endif %}
+
+    {% if req_output[1] %}
+        <section class="item content">
+            <div class="container">
+                <div class="underlined-title">
+                    <div class="editContent">
+                        <h1 class="text-center latestitems">Obtain Your Fraudulent File by Clicking the Button Below</h1>
+                    </div>
+                    <div class="wow-hr type_short">
+                        <span class="wow-hr-h">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="item content">
+            <div class="container text-center">
+                <a href="/static/result2.csv"" class="homebrowseitems">Click to Download
+                <div class="homebrowseitemsicon">
+                    <i class="fa fa-star fa-spin"></i>
+                </div>
+                </a>
+            </div>
+        </div>
+        <br/>
+        {% endif %} 
+
+    <!-- AREA =============================-->
+    <div class="item content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="fa fa-microphone infoareaicon"></i>
+                    <div class="infoareawrap">
+                        <h1 class="text-center subtitle">General Questions</h1>
+                        <p>
+                            Want to Know more About us?? Please feel free to get in touch with us via email . All your questions will be answered satisfactorily
+                        </p>
+                    </div>
+                </div>
+                <!-- /.col-md-4 col -->
+                <div class="col-md-4">
+                    <i class="fa fa-comments infoareaicon"></i>
+                    <div class="infoareawrap">
+                        <h1 class="text-center subtitle">Chat With Us</h1>
+                        <p>
+                            Send all your messages to our email . Contact us @abc60@gmail.com
+                        </p>
+                    </div>
+                </div>
+                <!-- /.col-md-4 col -->
+                <div class="col-md-4">
+                    <i class="fa fa-bullhorn infoareaicon"></i>
+                    <div class="infoareawrap">
+                        <h1 class="text-center subtitle">Spread The Word</h1>
+                        <p>
+                           Spread the word about our services
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <!-- {% if req_output[0] %}
+            <h1>Your Probability Value is {{defval}}</h1>
+            <img src="/static/BoxPlot.jpg">
+            <img src="/static/ConditionalPlot.jpg">
+            <img src="/static/Plot.jpg"> 
+        {% endif %}
+
+        {% if req_output[1] %}
+            <a href="/static/result2.csv">File Here</a>>
+        {% endif %}  -->
+    
+
+    </body>
+</html>
